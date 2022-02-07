@@ -8,9 +8,6 @@ require('dotenv').config()
 app.use(express.json())
 app.use("/api", ownRouter)
 
-router.get('/', (req, res) => {
-    res.send("heyyy")
-})
 
 if(process.env.NODE_ENV == "production"){
     app.use(express.static("client/build"));
